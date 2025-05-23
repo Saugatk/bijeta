@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: #fffff0;
+  --champagne: #f7e7ce;
+  --gold: #d4af37;
+  --wine-red: #722f37;
+  --black-velvet: #0a0a0a;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--black-velvet);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-lora {
+  font-family: var(--font-lora);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.bg-ivory {
+  background-color: var(--ivory);
+}
+
+.bg-champagne {
+  background-color: var(--champagne);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.bg-wine-red {
+  background-color: var(--wine-red);
+}
+
+.bg-black-velvet {
+  background-color: var(--black-velvet);
+}
+
+.text-ivory {
+  color: var(--ivory);
+}
+
+.text-champagne {
+  color: var(--champagne);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.text-wine-red {
+  color: var(--wine-red);
+}
+
+.text-black-velvet {
+  color: var(--black-velvet);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+.border-wine-red {
+  border-color: var(--wine-red);
+}
+
+.border-champagne {
+  border-color: var(--champagne);
+}
+
+.old-paper {
+  background-image: url("/images/paper-texture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.velvet-bg {
+  background-image: url("/images/velvet-texture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    to right,
+    var(--champagne) 0%,
+    var(--gold) 20%,
+    var(--champagne) 40%,
+    var(--gold) 60%,
+    var(--champagne) 80%,
+    var(--gold) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.candle-flicker {
+  animation: flicker 4s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow: 0 0 15px 5px rgba(212, 175, 55, 0.4);
+  }
+  20%,
+  24%,
+  55% {
+    box-shadow: 0 0 5px 2px rgba(212, 175, 55, 0.2);
+  }
+}
+
+.handwritten-reveal {
+  overflow: hidden;
+  border-right: 2px solid var(--gold);
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--gold);
+  }
+}
+
+.curtain-open {
+  animation: open-curtain 2s ease-out forwards;
+}
+
+@keyframes open-curtain {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 2s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.music-toggle:hover {
+  opacity: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+/* Great Vibes font is imported above via Google Fonts */
